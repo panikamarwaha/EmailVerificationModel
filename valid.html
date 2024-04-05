@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valid OTP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background:url("https://wallpapercosmos.com/w/full/a/9/1/593593-2560x1600-desktop-hd-coffee-beans-wallpaper.jpg");
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-size: cover; 
+    }
+
+    .container {
+      background-color:black;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 400px;
+      text-align: center;
+      color: #fff;
+      transform: translate(-430px, -50px);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Valid OTP</h1>
+    <p>Welcome, <span id="userName"></span>!       Account created successfully.</p>
+  </div>
+  
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    document.getElementById('userName').innerText = name;
+  </script>
+</body>
+</html>
